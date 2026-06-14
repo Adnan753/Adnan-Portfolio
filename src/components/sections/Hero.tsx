@@ -11,7 +11,7 @@ export default function Hero({ activeColor }: HeroProps) {
   return (
     <section className="p-6 md:p-12 border-b border-[#111111] bg-[#EFEDE7]/20 relative overflow-hidden">
       <div className="max-w-3xl space-y-6">
-        <div className="inline-block text-xs uppercase px-2 py-0.5 bg-neutral-200 border border-neutral-400 font-bold tracking-widest text-neutral-700">
+        <div className="inline-block text-xs uppercase px-2 py-0.5 bg-neutral-200 border border-neutral-400 font-bold tracking-widest text-neutral-700 transition-all hover:scale-105 duration-200 cursor-default">
           // EXECUTIVE_SUMMARY
         </div>
 
@@ -32,19 +32,19 @@ export default function Hero({ activeColor }: HeroProps) {
         {/* Inline CLI-styled Contact Links */}
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3 pt-2 text-xs">
           <span className="font-bold text-neutral-500">$ cat cta_links.sh</span>
-          <a href="#contact" className="underline font-bold hover:opacity-70 flex items-center gap-1">
+          <a href="#contact" className="underline font-bold transition-all duration-150 hover:-translate-y-0.5 hover:opacity-85 inline-block">
             [Email Comms]
           </a>
-          <a href="#projects" className="underline font-bold hover:opacity-70">
+          <a href="#projects" className="underline font-bold transition-all duration-150 hover:-translate-y-0.5 hover:opacity-85 inline-block">
             [View Work Logs]
           </a>
-          <a href="https://github.com" target="_blank" rel="noreferrer" className="underline font-bold hover:opacity-70">
+          <a href="https://github.com" target="_blank" rel="noreferrer" className="underline font-bold transition-all duration-150 hover:-translate-y-0.5 hover:opacity-85 inline-block">
             [GitHub Repository]
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="underline font-bold hover:opacity-70">
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="underline font-bold transition-all duration-150 hover:-translate-y-0.5 hover:opacity-85 inline-block">
             [LinkedIn Network]
           </a>
-          <a href="/resume.pdf" download className="underline font-bold hover:opacity-70 text-emerald-600">
+          <a href="/resume.pdf" download className="underline font-bold transition-all duration-150 hover:-translate-y-0.5 hover:opacity-85 inline-block text-emerald-600">
             [Download Resume.pdf]
           </a>
         </div>
@@ -55,7 +55,7 @@ export default function Hero({ activeColor }: HeroProps) {
         <img
           src={adnanImg}
           alt="Adnan Patel"
-          className="w-full h-full object-contain object-bottom grayscale transition-all duration-300 hover:grayscale-0 pointer-events-auto"
+          className="w-full h-full object-contain object-bottom grayscale transition-all duration-300 hover:grayscale-0 hover:scale-[1.02] pointer-events-auto cursor-pointer"
         />
       </div>
     </section>

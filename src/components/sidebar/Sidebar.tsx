@@ -1,6 +1,8 @@
 // @ts-nocheck
 import React, { useState, useEffect, useRef } from 'react';
 import type { AccentTheme, TerminalLine } from '../../types';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { Mail01Icon, LinkedinIcon, GithubIcon, FileAttachmentIcon } from '@hugeicons/core-free-icons';
 
 interface SidebarProps {
   activeColor: AccentTheme;
@@ -113,40 +115,15 @@ export default function Sidebar({ activeColor }: SidebarProps) {
 
         {/* Simulated Live Diagnostic Widgets */}
         <div className="space-y-4">
-          <div className="border border-[#111111] p-4 bg-white space-y-3">
-            <div className="flex justify-between items-center text-xs border-b border-[#111111]/10 pb-1.5">
-              <span className="font-bold uppercase tracking-wider text-neutral-500">Infra Core Integrity</span>
-              <span className="text-emerald-600 font-bold">STABLE</span>
-            </div>
-            <div className="grid grid-cols-2 gap-2 text-xs">
-              <div>
-                <span className="block text-[10px] text-neutral-400">AWS Billing Status</span>
-                <span className="font-bold text-neutral-800">-37.5% Optimized</span>
-              </div>
-              <div>
-                <span className="block text-[10px] text-neutral-400">P99 Gateway Latency</span>
-                <span className="font-bold text-neutral-800">12ms average</span>
-              </div>
-              <div>
-                <span className="block text-[10px] text-neutral-400">Uptime Metric</span>
-                <span className="font-bold" style={{ color: activeColor.color }}>99.992%</span>
-              </div>
-              <div>
-                <span className="block text-[10px] text-neutral-400">Current P0 Queue</span>
-                <span className="font-bold text-emerald-600">0 critical</span>
-              </div>
-            </div>
-          </div>
-
           {/* Quick CLI Shell Control Center */}
-          <div className="border border-[#111111] bg-neutral-900 text-neutral-200 p-4 space-y-3">
+          <div className="border-2 border-[#111111] bg-neutral-900 text-neutral-200 p-4 space-y-3 shadow-[3px_3px_0px_0px_#111111] hover:shadow-[6px_6px_0px_0px_#111111] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200">
             <div className="flex justify-between items-center text-[10px] border-b border-neutral-800 pb-2 text-neutral-400">
               <span className="font-bold">SHELL-PROMPT // INTERACTIVE</span>
               <span className="animate-pulse" style={{ color: activeColor.color }}>● CONNECTED</span>
             </div>
 
             {/* Micro Terminal Display */}
-            <div className="h-40 overflow-y-auto space-y-1.5 text-xs text-neutral-300 no-scrollbar select-none">
+            <div className="h-80 overflow-y-auto space-y-1.5 text-xs text-neutral-300 no-scrollbar select-none">
               {terminalHistory.map((line, idx) => (
                 <div key={idx} className="leading-tight">
                   {line.type === 'input' ? (
@@ -167,7 +144,7 @@ export default function Sidebar({ activeColor }: SidebarProps) {
                 <button
                   key={cmd}
                   onClick={() => handleTerminalButton(cmd)}
-                  className="text-[10px] bg-neutral-800 hover:bg-neutral-700 text-neutral-200 px-1.5 py-0.5 border border-neutral-700 transition"
+                  className="text-[10px] bg-neutral-800 hover:bg-neutral-700 active:translate-y-0.5 text-neutral-200 px-1.5 py-0.5 border border-neutral-700 transition-all duration-75"
                 >
                   {cmd}()
                 </button>
@@ -190,11 +167,14 @@ export default function Sidebar({ activeColor }: SidebarProps) {
         </div>
 
         {/* Quick Contact Box */}
-        <div className="border border-[#111111] p-4 bg-white space-y-3">
+        <div className="border-2 border-[#111111] p-4 bg-white space-y-3 shadow-[3px_3px_0px_0px_#111111] hover:shadow-[6px_6px_0px_0px_#111111] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all duration-200">
           <span className="text-[10px] text-neutral-500 block uppercase font-bold">// SECURE_COMMS_V2</span>
           <div className="space-y-2 text-xs">
             <div className="flex justify-between items-center">
-              <span>EMAIL:</span>
+              <span className="flex items-center gap-1.5">
+                <HugeiconsIcon icon={Mail01Icon} size={18} style={{ color: activeColor.color }} />
+                EMAIL:
+              </span>
               <button
                 onClick={() => copyToClipboard('adnan.devops@fastmail.com', 'email')}
                 className="font-bold underline hover:opacity-75 text-left"
@@ -203,19 +183,28 @@ export default function Sidebar({ activeColor }: SidebarProps) {
               </button>
             </div>
             <div className="flex justify-between items-center">
-              <span>LINKEDIN:</span>
+              <span className="flex items-center gap-1.5">
+                <HugeiconsIcon icon={LinkedinIcon} size={18} style={{ color: activeColor.color }} />
+                LINKEDIN:
+              </span>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="font-bold underline hover:opacity-75">
                 /in/adnanpatelsre
               </a>
             </div>
             <div className="flex justify-between items-center">
-              <span>GITHUB:</span>
+              <span className="flex items-center gap-1.5">
+                <HugeiconsIcon icon={GithubIcon} size={18} style={{ color: activeColor.color }} />
+                GITHUB:
+              </span>
               <a href="https://github.com" target="_blank" rel="noreferrer" className="font-bold underline hover:opacity-75">
                 /github/adnan-patel
               </a>
             </div>
             <div className="flex justify-between items-center">
-              <span>RESUME:</span>
+              <span className="flex items-center gap-1.5">
+                <HugeiconsIcon icon={FileAttachmentIcon} size={18} style={{ color: activeColor.color }} />
+                RESUME:
+              </span>
               <a href="/resume.pdf" download className="font-bold underline hover:opacity-75 text-emerald-600">
                 [resume.pdf]
               </a>
