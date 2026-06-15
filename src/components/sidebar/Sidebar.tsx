@@ -13,7 +13,7 @@ export default function Sidebar({ activeColor }: SidebarProps) {
     { type: 'input', text: 'whoami' },
     { type: 'output', text: 'adnanpatel_sre // status: active // loc: pimpri-chinchwad' },
     { type: 'input', text: 'cat bio.txt' },
-    { type: 'output', text: 'DevOps / Site Reliability Engineer building resilient infrastructure. Ex-Signiance, ex-Corescale.' }
+    { type: 'output', text: 'DevOps Engineer building resilient infrastructure. Ex-ByteHint IT Solutions, ex-Wet Dog Weather.' }
   ]);
   const [terminalInput, setTerminalInput] = useState('');
   const [copyStatus, setCopyStatus] = useState('');
@@ -37,19 +37,19 @@ export default function Sidebar({ activeColor }: SidebarProps) {
         response = 'AVAILABLE COMMANDS: whoami, skills, metrics, contact, experience, clear, ping, system-stats';
         break;
       case 'whoami':
-        response = 'adnan_patel | Principal DevOps Architect & SRE. Focuses on high throughput, zero-page infrastructure.';
+        response = 'adnan_patel | DevOps Engineer. Sole infrastructure owner for a SaaS platform serving 30,000+ users.';
         break;
       case 'skills':
-        response = 'PLATFORMS: AWS, GCP // IAAC: Terraform, Ansible // K8S: EKS, Helm, ArgoCD // MON: Prometheus, Grafana, Datadog // BACKEND: Go, Python, Bash';
+        response = 'CLOUD: AWS, Azure (basic) // IAC: Terraform // DEVOPS: Docker, GitHub Actions, Nginx // BACKEND: Node.js, FastAPI, Python, MongoDB // LEARNING: Kubernetes (EKS), Helm, ArgoCD, Ansible, Prometheus, Grafana';
         break;
       case 'metrics':
-        response = 'METRICS // users_served: 30K+ // cost_reduction: 37.5% // p0_resolution: 40s -> 1s // uptime: 99.99%';
+        response = 'METRICS // users_served: 30K+ // cost_reduction: 37.5% // p0_resolution: 40s -> 1s // contracts: 2 repeat-hire';
         break;
       case 'contact':
         response = 'EMAIL: adnan.devops@fastmail.com // LINKEDIN: linkedin.com/in/adnanpatelsre // GITHUB: github.com/adnan-patel';
         break;
       case 'experience':
-        response = 'CURRENT: DevOps Engineer @ Signiance Technologies // PREVIOUS: SRE @ Corescale Labs, Assoc Platform Eng @ Nexus Networks';
+        response = 'CURRENT: DevOps Engineer @ Signiance Technologies // PREVIOUS: DevOps Engineer @ ByteHint IT Solutions, Cloud Solutions Consultant @ Wet Dog Weather';
         break;
       case 'ping':
         response = `64 bytes from adnanpatel.sh: icmp_seq=1 ttl=64 time=0.421 ms`;
@@ -78,10 +78,10 @@ export default function Sidebar({ activeColor }: SidebarProps) {
       let response = '';
       switch (command) {
         case 'whoami':
-          response = 'adnan_patel | Principal DevOps Architect & SRE. Sole infrastructure owner, handling millions of request pathways.';
+          response = 'adnan_patel | DevOps Engineer. Sole infrastructure owner for a SaaS platform serving 30,000+ users.';
           break;
         case 'skills':
-          response = 'AWS, GCP, Kubernetes, Terraform, ArgoCD, Prometheus, Python, Go, CI/CD pipelines, Networking.';
+          response = 'AWS, Terraform, Docker, GitHub Actions, Node.js, FastAPI, Python, MongoDB. Learning EKS, Helm, ArgoCD, Prometheus, Grafana.';
           break;
         case 'metrics':
           response = '30,000+ active users // 37.5% AWS cost cut // 40s to 1s latency pipeline fix.';

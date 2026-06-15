@@ -1,19 +1,13 @@
-// @ts-nocheck
-import React from 'react';
 import {
   AWS,
-  GoogleCloud,
   Kubernetes,
   Docker,
   Terraform,
   Ansible,
   Grafana,
-  Datadog,
-  Go,
   Python,
   Bash,
-  NodeJs,
-  RustDark
+  NodeJs
 } from 'developer-icons';
 
 export default function Skills() {
@@ -29,60 +23,54 @@ export default function Skills() {
         {/* Category 1 */}
         <div className="border-2 border-[#111111] p-5 bg-white flex flex-col justify-between space-y-3 shadow-[4px_4px_0px_0px_#111111] hover:shadow-[8px_8px_0px_0px_#111111] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
           <div>
-            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">01 / CLOUD_AND_ORCHESTRATION</span>
+            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">01 / CLOUD_AND_INFRASTRUCTURE</span>
             <p className="text-xs text-neutral-500 leading-relaxed font-mono mt-1">
-              aws, google cloud (gcp), kubernetes (eks, gke), docker, containerized runtime configs, serverless deployments, multi-tenant network policies.
+              AWS (EC2, ECS Fargate, ALB, S3, CloudFront, IAM, VPC, RDS, ECR, Lambda, Glue, Step Functions, Redshift, Bedrock, Cognito, Secrets Manager, CloudWatch, SNS, CodePipeline), Azure (basic).
             </p>
           </div>
           <div className="flex gap-3 items-center mt-3 pt-3 border-t border-neutral-100 flex-wrap">
             <AWS size={28} />
-            <GoogleCloud size={28} />
-            <Kubernetes size={28} />
-            <Docker size={28} />
           </div>
         </div>
 
         {/* Category 2 */}
-        <div className="border-2 border-2 border-[#111111] p-5 bg-white flex flex-col justify-between space-y-3 shadow-[4px_4px_0px_0px_#111111] hover:shadow-[8px_8px_0px_0px_#111111] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
+        <div className="border-2 border-[#111111] p-5 bg-white flex flex-col justify-between space-y-3 shadow-[4px_4px_0px_0px_#111111] hover:shadow-[8px_8px_0px_0px_#111111] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
           <div>
-            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">02 / INFRASTRUCTURE_AS_CODE</span>
+            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">02 / NETWORKING_AND_SECURITY</span>
             <p className="text-xs text-neutral-500 leading-relaxed font-mono mt-1">
-              terraform, cloudformation templates, ansible playbooks, terragrunt modules, packer image provisioning, gitops (argocd configurations).
+              VPC design, public/private subnets, NAT Gateway, Internet Gateway, security groups, NACLs, ALB, SSL/TLS, DNS, Nginx reverse proxy, TCP/IP, HTTP/HTTPS, firewall rules.
             </p>
           </div>
           <div className="flex gap-3 items-center mt-3 pt-3 border-t border-neutral-100 flex-wrap">
-            <Terraform size={28} />
-            <Ansible size={28} />
+            <Bash size={28} />
           </div>
         </div>
 
         {/* Category 3 */}
         <div className="border-2 border-[#111111] p-5 bg-white flex flex-col justify-between space-y-3 shadow-[4px_4px_0px_0px_#111111] hover:shadow-[8px_8px_0px_0px_#111111] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
           <div>
-            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">03 / MONITORING_OBSERVABILITY</span>
+            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">03 / DEVOPS_AND_CICD</span>
             <p className="text-xs text-neutral-500 leading-relaxed font-mono mt-1">
-              prometheus, grafana visualization, datadog monitoring integration, opentelemetry, kibana, cloudwatch analytics, ebpf tracking.
+              Docker, Terraform, GitHub Actions, AWS CodePipeline/CodeBuild/CodeDeploy, PM2, Nginx, Certbot, Linux, Bash scripting, Git.
             </p>
           </div>
           <div className="flex gap-3 items-center mt-3 pt-3 border-t border-neutral-100 flex-wrap">
-            <Grafana size={28} />
-            <Datadog size={28} />
+            <Docker size={28} />
+            <Terraform size={28} />
           </div>
         </div>
 
         {/* Category 4 */}
         <div className="border-2 border-[#111111] p-5 bg-white flex flex-col justify-between space-y-3 shadow-[4px_4px_0px_0px_#111111] hover:shadow-[8px_8px_0px_0px_#111111] hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200">
           <div>
-            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">04 / PROGRAMMING_BACKEND</span>
+            <span className="text-[10px] uppercase font-bold text-neutral-400 block tracking-widest">04 / BACKEND_AND_DATA</span>
             <p className="text-xs text-neutral-500 leading-relaxed font-mono mt-1">
-              golang, python scripting, bash shell scripting, node.js utilities, fastapi backends, sql/no-sql queries, rest endpoints development.
+              Node.js, FastAPI, Python, REST APIs, MongoDB, MySQL, Supabase, PySpark, AWS Glue.
             </p>
           </div>
           <div className="flex gap-3 items-center mt-3 pt-3 border-t border-neutral-100 flex-wrap">
-            <Go size={28} />
-            <Python size={28} />
-            <Bash size={28} />
             <NodeJs size={28} />
+            <Python size={28} />
           </div>
         </div>
       </div>
@@ -94,11 +82,13 @@ export default function Skills() {
             ⚙️ ACTIVE_LEARNING_THREAD
           </span>
           <p className="text-xs text-neutral-800 leading-relaxed">
-            I am currently diving deep into <strong className="font-bold text-neutral-900">ebpf-deep-dive optimizations</strong> for core kernel tracing, <strong className="font-bold text-neutral-900">Rust programming</strong> for high-speed systems engineering, and exploring <strong className="font-bold text-neutral-900">WasmEdge containers</strong> for fast localized serverless configurations.
+            I am currently diving deep into <strong className="font-bold text-neutral-900">Kubernetes (EKS), Helm, ArgoCD, Ansible, Prometheus, and Grafana</strong> to deploy, automate, and monitor complex containerized systems.
           </p>
         </div>
         <div className="flex gap-3 items-center shrink-0">
-          <RustDark size={40} />
+          <Kubernetes size={32} />
+          <Ansible size={32} />
+          <Grafana size={32} />
         </div>
       </div>
     </section>

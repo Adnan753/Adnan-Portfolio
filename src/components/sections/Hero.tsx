@@ -26,7 +26,7 @@ export default function Hero({ activeColor }: HeroProps) {
 
         {/* Dense impact summary */}
         <p className="text-sm md:text-base text-neutral-800 leading-relaxed font-normal max-w-2xl">
-          I design, architect, and optimize resilient cloud foundations. As a former sole infrastructure owner, I served over <strong className="font-bold underline">30K+ active end-users</strong>, engineered pipeline transformations that slashed deployment loops from <strong className="font-bold underline">40s down to 1s</strong>, and implemented AWS cost governance cuts amounting to a precise <strong className="font-bold underline text-neutral-900">37.5% reduction</strong> in monthly burn.
+          I am a DevOps Engineer with 1.5 years of production experience, serving as the <strong className="font-bold underline">sole infrastructure owner</strong> for a SaaS platform serving <strong className="font-bold underline">30,000+ users</strong>. I cut AWS costs by <strong className="font-bold underline text-neutral-900">37.5%</strong> through a CDN architecture redesign, resolved a critical <strong className="font-bold underline">P0 latency incident (40s to 1s)</strong> during a live product launch, and delivered paid AWS infrastructure projects for international clients. I also solo-built an Agentic FinOps platform with a live MVP at <a href="https://thriftex.app" target="_blank" rel="noreferrer" className="underline font-bold hover:opacity-85">thriftex.app</a>.
         </p>
 
         {/* Inline CLI-styled Contact Links */}
