@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function StatusBar() {
   return (
-    <div className="bg-[#111111] text-[#E5E5E5] text-[10px] tracking-wider px-4 py-1.5 flex justify-between items-center border-b border-[#111111] overflow-x-auto no-scrollbar whitespace-nowrap select-none">
+    <div className="bg-[#111111] text-[#E5E5E5] text-[10px] tracking-wider px-4 py-1.5 flex justify-between items-center border-b-2 border-[#111111] overflow-x-auto no-scrollbar whitespace-nowrap select-none">
       <div className="flex items-center gap-2">
         {/* Green Microchip SVG Icon */}
         <svg className="w-3.5 h-3.5 text-emerald-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function Footer() {
   return (
-    <footer className="p-6 md:px-12 md:py-8 bg-white flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs">
+    <footer className="p-6 md:px-12 md:py-8 bg-white flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs border-t-4 border-[#111111]">
       <div className="space-y-1">
         <span className="font-bold">© 2026 ADNAN PATEL // INFRASTRUCTURE ARCHITECT</span>
         <p className="text-[10px] text-neutral-400">All rights reserved. Code compilation stable.</p>

@@ -6,7 +6,8 @@ import tseslint from 'typescript-eslint'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist']),
+  // legacy-brutalist holds the superseded v2 design, kept for reference only.
+  globalIgnores(['dist', 'legacy-brutalist']),
   {
     files: ['**/*.{ts,tsx}'],
     extends: [
