@@ -1,81 +1,44 @@
-// @ts-nocheck
-import React, { useState } from 'react';
-
-// Layout
-import StatusBar from './components/layout/StatusBar';
-import Header from './components/layout/Header';
-import Footer from './components/layout/Footer';
-
-// Sidebar
-import Sidebar from './components/sidebar/Sidebar';
-
-// Sections
+import Rail from './components/Rail';
+import Rule from './components/Rule';
 import Hero from './components/sections/Hero';
-import MetricsDashboard from './components/sections/MetricsDashboard';
-import Projects from './components/sections/Projects';
+import Stats from './components/sections/Stats';
+import Evidence from './components/sections/Evidence';
 import Experience from './components/sections/Experience';
-import Skills from './components/sections/Skills';
-import Certifications from './components/sections/Certifications';
+import Stack from './components/sections/Stack';
+import Credentials from './components/sections/Credentials';
 import Contact from './components/sections/Contact';
-
-// Data / constants
-import { ACCENT_THEMES } from './data/themes';
+import useReveal from './hooks/useReveal';
 
 export default function App() {
-  const [accent] = useState('green'); // green | amber | blue
-  const activeColor = ACCENT_THEMES[accent];
+  useReveal();
 
   return (
-    <div className="min-h-screen bg-[#F7F6F2] text-[#111111] selection:bg-[#111111] selection:text-[#F7F6F2] font-mono leading-relaxed p-0 m-0 border-4 border-[#111111]">
-      <style>{`
-        @import url('https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&display=swap');
+    <div className="shell">
+      <Rail />
 
-        /* Default body/monospace technical font (Geist Mono) */
-        *, body, p, span, button, a, input, select, textarea, code, pre {
-          font-family: 'Geist Mono', monospace;
-        }
+      <main className="page">
+        <Hero />
 
-        /* Brutalist heading font (Satoshi) */
-        h1, h2, h3, h4, h5, h6, .font-heading {
-          font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
-        }
+        <Rule thirds />
+        <Stats />
+        <Rule thirds />
 
-        /* Hide scrollbar for Chrome, Safari and Opera */
-        .no-scrollbar::-webkit-scrollbar {
-          display: none;
-        }
-        /* Hide scrollbar for IE, Edge and Firefox */
-        .no-scrollbar {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-      `}</style>
+        <Evidence />
 
-      {/* Top diagnostic status bar */}
-      <StatusBar />
+        <div style={{ height: 100 }} />
+        <Rule />
 
-      {/* Sticky navigation header */}
-      <Header activeColor={activeColor} />
+        <Experience />
+        <Rule />
 
-      {/* Main 2-column grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-[380px_1fr] min-h-[calc(100vh-60px)]">
+        <Stack />
+        <Rule />
 
-        {/* Left sidebar — terminal + metrics */}
-        <Sidebar activeColor={activeColor} />
+        <Credentials />
+        <Rule />
 
-        {/* Right main content — all page sections */}
-        <main className="flex flex-col">
-          <Hero activeColor={activeColor} />
-          <MetricsDashboard activeColor={activeColor} />
-          <Projects activeColor={activeColor} />
-          <Experience />
-          <Skills />
-          <Certifications />
-          <Contact activeColor={activeColor} />
-          <Footer />
-        </main>
-      </div>
+        <Contact />
+      </main>
     </div>
   );
 }
